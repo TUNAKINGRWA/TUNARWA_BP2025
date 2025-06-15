@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鳍开得胜 交互式商业计划书 (投资者版)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background-color: #FDFDFD;
+            color: #1a202c;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .text-gradient {
+            background-image: linear-gradient(to right, #1e40af, #0ea5e9);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(30, 64, 175, 0.1);
+        }
+        .section-title {
+            font-size: 2.25rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #1e40af;
+        }
+        .section-subtitle {
+            font-size: 1.25rem;
+            color: #4a5568;
+            max-width: 800px;
+            margin: 0 auto 3rem auto;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in-section {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+        .cta-button {
+            background-color: #f59e0b;
+            color: #1e40af;
+            font-weight: bold;
+            padding: 1rem 2.5rem;
+            border-radius: 0.5rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+        }
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 7px 20px rgba(245, 158, 11, 0.5);
+        }
+        .finwin-gradient {
+            background: linear-gradient(135deg, #1e40af 0%, #0ea5e9 50%, #0d9488 100%);
+        }
+    </style>
+</head>
+<body class="bg-[#FDFDFD]">
+
+    <main>
+        <!-- Section 1: The Core Idea -->
+        <section id="hero" class="py-20 md:py-28 text-center bg-white">
+            <div class="container mx-auto px-6 lg:px-8">
+                <div class="text-6xl mb-6">🐟</div>
+                <h1 class="text-4xl md:text-5xl font-extrabold mb-4 text-gradient">鳍开得胜：一句话说清我们的生意</h1>
+                <p class="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto mb-12">
+                    我们用世界上最值钱的一种鱼（蓝鳍金枪鱼）的稳定业务收入，去投资一项能**治疗老年痴呆的革命性新药**，并让我们的投资人**同时拥有这两个业务的全部利润**。
+                </p>
+                <div class="finwin-gradient text-white rounded-xl p-6 max-w-2xl mx-auto shadow-2xl">
+                    <h2 class="text-2xl md:text-3xl font-bold text-[#f59e0b] mb-2">寻求融资: $1,000,000 美元</h2>
+                    <p class="text-xl text-white">出让项目股权: 15%</p>
+                    <p class="text-lg text-gray-200 mt-2">估值: $6,666,667 美元</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: What You Get -->
+        <section id="what-you-get" class="py-16 md:py-24 bg-[#F8F9FA]">
+             <div class="container mx-auto px-6 lg:px-8 text-center fade-in-section">
+                <h2 class="section-title">您的100万美元，能买到什么？</h2>
+                <p class="section-subtitle">您投资的不是一个虚无缥缈的概念，而是两份实实在在的资产。</p>
+                <div class="grid md:grid-cols-2 gap-8 md:gap-12">
+                    <div class="bg-white p-8 rounded-2xl shadow-lg card-hover">
+                        <div class="text-5xl mb-4">🛡️</div>
+                        <h3 class="text-2xl font-bold mb-3 text-[#0ea5e9]">一份"安全垫"：像收租一样稳的资产</h3>
+                        <p class="text-gray-600">您将间接拥有一份受澳大利亚法律保护的**金枪鱼捕捞权**。它就像一块"海里的地皮"，非常稀缺，每年都能产生**稳定的现金流**，确保了您投资的价值底线。</p>
+                        <div class="mt-4 p-3 bg-blue-50 rounded-lg">
+                            <p class="text-sm text-blue-700 font-medium">鳍开得胜独家运营模式：年化收益率15-25%</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl shadow-lg card-hover">
+                        <div class="text-5xl mb-4">🚀</div>
+                        <h3 class="text-2xl font-bold mb-3 text-[#0d9488]">一张"超级彩票"：潜力巨大的增长引擎</h3>
+                        <p class="text-gray-600">您将同时获得我们**阿尔茨海默症新药项目**的股份。我们的核心技术，能让这款新药**成本仅为市面同类产品的1/8**，一旦成功，价值增长将是**百倍甚至千倍**级别。</p>
+                        <div class="mt-4 p-3 bg-teal-50 rounded-lg">
+                            <p class="text-sm text-teal-700 font-medium">鳍开得胜专利技术：缩醛磷脂纯度>98%</p>
+                        </div>
+                    </div>
+                </div>
+             </div>
+        </section>
+        
+        <!-- Section 3: How YOU Make Money -->
+        <section id="how-you-win" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6 lg:px-8 text-center fade-in-section">
+                 <h2 class="section-title">您怎么赚钱？鳍开得胜自动增值飞轮</h2>
+                 <p class="section-subtitle">这是我们模式最核心、最吸引人的一点。我们创造了一个自动化的价值飞轮。</p>
+                 <div class="relative grid md:grid-cols-4 gap-8 text-center bg-gray-50 p-8 rounded-2xl shadow-inner">
+                     <div class="absolute top-1/2 left-0 w-full h-0.5 bg-gray-200 hidden md:block"></div>
+                     <div class="absolute top-0 left-1/2 w-0.5 h-full bg-gray-200 hidden md:block"></div>
+                    
+                    <div class="relative z-10 p-4">
+                        <div class="w-16 h-16 mx-auto bg-[#f59e0b] rounded-full flex items-center justify-center text-3xl mb-4 text-white shadow-lg">1</div>
+                        <h4 class="font-bold text-lg">产生利润</h4>
+                        <p class="text-sm text-gray-500">鳍开得胜产品销售和RWA金融服务的所有利润进入财库。</p>
+                    </div>
+                    <div class="relative z-10 p-4">
+                        <div class="w-16 h-16 mx-auto bg-[#0ea5e9] rounded-full flex items-center justify-center text-3xl mb-4 text-white shadow-lg">2</div>
+                        <h4 class="font-bold text-lg">利润回购</h4>
+                        <p class="text-sm text-gray-500">将50%的净利润，每天自动买回$FIN代币。</p>
+                    </div>
+                    <div class="relative z-10 p-4">
+                        <div class="w-16 h-16 mx-auto bg-[#0d9488] rounded-full flex items-center justify-center text-3xl mb-4 text-white shadow-lg">3</div>
+                        <h4 class="font-bold text-lg">立即销毁</h4>
+                        <p class="text-sm text-gray-500">买回来的$FIN代币立刻永久销毁。</p>
+                    </div>
+                    <div class="relative z-10 p-4">
+                        <div class="w-16 h-16 mx-auto bg-[#1e40af] rounded-full flex items-center justify-center text-3xl mb-4 text-white shadow-lg">4</div>
+                        <h4 class="font-bold text-lg">价值提升</h4>
+                        <p class="text-sm text-gray-500">代币变少，您持有的份额更值钱。</p>
+                    </div>
+                 </div>
+                 <div class="mt-8 p-6 bg-gradient-to-r from-blue-50 to-teal-50 rounded-xl">
+                    <h4 class="text-xl font-bold text-gray-800 mb-2">🎯 鳍开得胜独特优势</h4>
+                    <p class="text-gray-600">与传统RWA项目不同，我们的代币$FIN锚定的是<strong>真实的海洋资产</strong>和<strong>专利生物技术</strong>，具备内在价值支撑。</p>
+                 </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Why Us -->
+        <section id="why-us" class="py-16 md:py-24 bg-[#F8F9FA]">
+            <div class="container mx-auto px-6 lg:px-8 text-center fade-in-section">
+                <h2 class="section-title">为什么这事鳍开得胜能干成？（我们的王牌）</h2>
+                <p class="section-subtitle">我们已经把成功所需要的所有顶级资源都整合好了。</p>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-lg shadow-md">
+                        <div class="text-4xl mb-4">🎣</div>
+                        <h3 class="font-bold text-xl text-[#0ea5e9] mb-2">海洋资源：Stehr集团</h3>
+                        <p class="text-gray-600">澳大利亚最大的渔业公司，行业霸主，拥有超过50年的运营经验。与鳍开得胜战略合作，确保稳定的金枪鱼供应链。</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-md">
+                        <div class="text-4xl mb-4">🧬</div>
+                        <h3 class="font-bold text-xl text-[#0d9488] mb-2">生物科技：田兵教授团队</h3>
+                        <p class="text-gray-600">浙江大学明星科学家，国际缩醛磷脂协会执行委员，该领域的国际权威。独家授权鳍开得胜专利技术。</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-md">
+                        <div class="text-4xl mb-4">💰</div>
+                        <h3 class="font-bold text-xl text-gray-700 mb-2">金融运营：鳍开得胜团队</h3>
+                        <p class="text-gray-600">香港持牌金融专家团队，懂得如何管理资产和对接全球资本市场。专业的RWA代币化运营经验。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4.5: Market Leadership -->
+        <section id="market-leadership" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6 lg:px-8 text-center fade-in-section">
+                <h2 class="section-title">鳍开得胜：中国蓝鳍金枪鱼市场的领导者</h2>
+                <p class="section-subtitle">我们不仅有顶级资源，更有实实在在的市场成就和巨大的增长空间。</p>
+                
+                <!-- Market Position -->
+                <div class="bg-gradient-to-r from-blue-50 to-teal-50 p-8 rounded-2xl shadow-lg mb-12">
+                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                        <div>
+                            <h3 class="text-3xl font-bold text-[#1e40af] mb-4">🏆 中国最大</h3>
+                            <p class="text-xl text-gray-700">鳍开得胜是目前中国最大的蓝鳍金枪鱼进口供应商，在这个高价值细分市场中占据主导地位。</p>
+                        </div>
+                        <div>
+                            <h3 class="text-3xl font-bold text-[#0d9488] mb-4">📈 10倍空间</h3>
+                            <p class="text-xl text-gray-700">基于市场分析，鳍开得胜金枪鱼品牌在大陆市场还有10倍的扩展空间，增长潜力巨大。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Current Partners -->
+                <div class="mb-12">
+                    <h3 class="text-2xl font-bold text-[#1e40af] mb-8">🤝 已合作的知名品牌</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                        <div class="bg-white p-6 rounded-xl shadow-md border-2 border-blue-100 hover:border-blue-300 transition-colors">
+                            <div class="text-3xl mb-2">🛒</div>
+                            <h4 class="font-bold text-gray-800">盒马生鲜</h4>
+                            <p class="text-sm text-gray-600">新零售标杆</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-md border-2 border-green-100 hover:border-green-300 transition-colors">
+                            <div class="text-3xl mb-2">🥬</div>
+                            <h4 class="font-bold text-gray-800">叮咚买菜</h4>
+                            <p class="text-sm text-gray-600">生鲜电商龙头</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-md border-2 border-red-100 hover:border-red-300 transition-colors">
+                            <div class="text-3xl mb-2">🍣</div>
+                            <h4 class="font-bold text-gray-800">寿司郎</h4>
+                            <p class="text-sm text-gray-600">日式连锁餐厅</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-md border-2 border-purple-100 hover:border-purple-300 transition-colors">
+                            <div class="text-3xl mb-2">🍱</div>
+                            <h4 class="font-bold text-gray-800">滨寿司</h4>
+                            <p class="text-sm text-gray-600">精品寿司品牌</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-md border-2 border-yellow-100 hover:border-yellow-300 transition-colors">
+                            <div class="text-3xl mb-2">🏮</div>
+                            <h4 class="font-bold text-gray-800">北京高端日料</h4>
+                            <p class="text-sm text-gray-600">多家顶级餐厅</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Market Insights -->
+                <div class="bg-gray-50 p-8 rounded-2xl shadow-lg">
+                    <h3 class="text-2xl font-bold text-[#0d9488] mb-6">📊 市场洞察</h3>
+                    <div class="grid md:grid-cols-3 gap-6 text-left">
+                        <div class="bg-white p-6 rounded-lg">
+                            <h4 class="font-bold text-lg text-blue-700 mb-2">供应链优势</h4>
+                            <p class="text-gray-600">作为中国最大的蓝鳍金枪鱼进口商，我们拥有完整的冷链物流体系和质量控制标准。</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg">
+                            <h4 class="font-bold text-lg text-teal-700 mb-2">渠道覆盖</h4>
+                            <p class="text-gray-600">从新零售到传统餐饮，从电商平台到高端日料，全渠道布局已经形成。</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg">
+                            <h4 class="font-bold text-lg text-green-700 mb-2">增长潜力</h4>
+                            <p class="text-gray-600">中国高端海鲜消费市场快速增长，鳍开得胜品牌还有10倍扩展空间。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: The Deep Dive -->
+        <section id="deep-dive" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6 lg:px-8 text-center fade-in-section">
+                <h2 class="section-title">数据深潜：支撑鳍开得胜信心的证据</h2>
+                <p class="section-subtitle">故事激动人心，但数据更具说服力。以下是支撑我们两大支柱的关键数据，欢迎您交互探索。</p>
+                
+                <div class="grid md:grid-cols-2 gap-12">
+                    <!-- RWA Deep Dive -->
+                    <div class="bg-gray-50 p-6 rounded-2xl shadow-lg">
+                        <h3 class="text-2xl font-bold text-[#0ea5e9] mb-4">"安全垫"的收入潜力</h3>
+                        <p class="text-gray-600 mb-6">仅10吨捕捞权，通过鳍开得胜不同运营模式，年收入潜力截然不同。下图展示了其价值潜力。</p>
+                        <div class="chart-container">
+                            <canvas id="revenueChart"></canvas>
+                        </div>
+                        <div class="mt-4 p-3 bg-blue-50 rounded-lg">
+                            <p class="text-sm text-blue-700">鳍开得胜选择"增值加工"模式，最大化资产价值</p>
+                        </div>
+                    </div>
+
+                    <!-- Biotech Deep Dive -->
+                    <div class="bg-gray-50 p-6 rounded-2xl shadow-lg">
+                        <h3 class="text-2xl font-bold text-[#0d9488] mb-4">"超级彩票"的技术优势</h3>
+                         <p class="text-gray-600 mb-6">与日本市场主流产品相比，鳍开得胜的技术在成本和纯度上实现了双重颠覆。</p>
+                        <div class="chart-container" style="height:320px">
+                             <canvas id="comparisonChart"></canvas>
+                        </div>
+                        <div class="mt-4 p-3 bg-teal-50 rounded-lg">
+                            <p class="text-sm text-teal-700">鳍开得胜专利技术：成本降低87.5%，纯度提升26.7%</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Market Size Chart -->
+                <div class="mt-12 bg-gray-50 p-6 rounded-2xl shadow-lg">
+                    <h3 class="text-2xl font-bold text-[#1e40af] mb-4">市场规模：千亿美元蓝海市场</h3>
+                    <p class="text-gray-600 mb-6">鳍开得胜所处的三大细分市场，总规模接近千亿美元，年复合增长率超过90%。</p>
+                    <div class="chart-container">
+                        <canvas id="marketChart"></canvas>
+                    </div>
+
+                    <!-- Market Data Table -->
+                    <div class="mt-8 bg-white rounded-xl p-6 shadow-md">
+                        <h4 class="text-lg font-bold text-[#1e40af] mb-4">根据2025年最新权威市场研究报告，以下是对我们关注中三大细分市场（全球海洋生物活性成分、功能性磷脂市场、RWA代币化资产）的最新修正数据：</h4>
+                        
+                        <div class="overflow-x-auto">
+                            <table class="w-full border-collapse border border-gray-300 text-sm">
+                                <thead>
+                                    <tr class="bg-gray-100">
+                                        <th class="border border-gray-300 px-4 py-3 text-left font-bold">细分市场</th>
+                                        <th class="border border-gray-300 px-4 py-3 text-left font-bold">当前规模（2025年）</th>
+                                        <th class="border border-gray-300 px-4 py-3 text-left font-bold">年增长率（CAGR）</th>
+                                        <th class="border border-gray-300 px-4 py-3 text-left font-bold">2027年预测/趋势</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="border border-gray-300 px-4 py-3 font-medium">全球海洋生物活性成分</td>
+                                        <td class="border border-gray-300 px-4 py-3">$109亿</td>
+                                        <td class="border border-gray-300 px-4 py-3">6.4%</td>
+                                        <td class="border border-gray-300 px-4 py-3">$123亿（2027年估算）</td>
+                                    </tr>
+                                    <tr class="bg-gray-50">
+                                        <td class="border border-gray-300 px-4 py-3 font-medium">功能性磷脂市场</td>
+                                        <td class="border border-gray-300 px-4 py-3">$38.6亿</td>
+                                        <td class="border border-gray-300 px-4 py-3">7.8%</td>
+                                        <td class="border border-gray-300 px-4 py-3">$44.8亿（2027年估算）</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-gray-300 px-4 py-3 font-medium">RWA代币化资产</td>
+                                        <td class="border border-gray-300 px-4 py-3">$230亿</td>
+                                        <td class="border border-gray-300 px-4 py-3">约100%（2025年）</td>
+                                        <td class="border border-gray-300 px-4 py-3">$650亿以上（2027年有望突破）</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Market Data Sources -->
+                        <div class="mt-6 bg-blue-50 rounded-lg p-4">
+                            <h5 class="font-bold text-[#1e40af] mb-3">数据说明与来源：</h5>
+                            <ul class="space-y-2 text-gray-700">
+                                <li class="flex items-start">
+                                    <span class="inline-block w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                    <span><strong>全球海洋生物活性成分：</strong> 2025年全球市场规模约为109亿美元（约合人民币790亿元），年复合增长率为6.4%，2027年预计可达123亿美元左右。</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="inline-block w-2 h-2 bg-teal-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                    <span><strong>功能性磷脂市场：</strong> 2025年市场规模约为38.6亿美元，年复合增长率为7.8%，2027年预计可达44.8亿美元。</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="inline-block w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                    <span><strong>RWA代币化资产：</strong> 2025年上半年市场规模已达230亿美元，2025年单年增长率高达260%，远超原表格数据，2027年有望突破650亿美元甚至更高。</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Section 6: Funding -->
+         <section id="funding" class="py-16 md:py-24 bg-[#F8F9FA]">
+            <div class="container mx-auto px-6 lg:px-8 text-center fade-in-section">
+                 <h2 class="section-title">资金用途：让每一分钱都产生最大价值</h2>
+                 <p class="section-subtitle">鳍开得胜寻求100万美元，以加速实现关键价值催化剂。所有资金将被战略性地投入到能产生最高回报的领域。</p>
+                <div class="max-w-3xl mx-auto bg-white p-8 rounded-2xl shadow-xl">
+                    <div class="chart-container h-80 md:h-96">
+                         <canvas id="fundingChart"></canvas>
+                    </div>
+                    <div class="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
+                        <div class="p-3 bg-blue-50 rounded-lg">
+                            <div class="font-bold text-blue-700">技术研发 40%</div>
+                            <div class="text-blue-600">$400,000</div>
+                        </div>
+                        <div class="p-3 bg-teal-50 rounded-lg">
+                            <div class="font-bold text-teal-700">市场扩张 30%</div>
+                            <div class="text-teal-600">$300,000</div>
+                        </div>
+                        <div class="p-3 bg-yellow-50 rounded-lg">
+                            <div class="font-bold text-yellow-700">产业整合 20%</div>
+                            <div class="text-yellow-600">$200,000</div>
+                        </div>
+                        <div class="p-3 bg-gray-50 rounded-lg">
+                            <div class="font-bold text-gray-700">团队建设 10%</div>
+                            <div class="text-gray-600">$100,000</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Investment Returns -->
+        <section id="returns" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6 lg:px-8 text-center fade-in-section">
+                <h2 class="section-title">投资回报预期：鳍开得胜的价值增长路径</h2>
+                <p class="section-subtitle">基于保守、乐观、超预期三种情景，为投资者展示清晰的回报预期。</p>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-blue-50 p-6 rounded-xl">
+                        <h4 class="text-xl font-bold text-blue-700 mb-2">保守情景 (60%概率)</h4>
+                        <div class="text-3xl font-bold text-blue-600 mb-2">50倍</div>
+                        <p class="text-blue-600">3年后估值：$500M</p>
+                        <p class="text-blue-600">年化收益率：200%+</p>
+                    </div>
+                    <div class="bg-teal-50 p-6 rounded-xl">
+                        <h4 class="text-xl font-bold text-teal-700 mb-2">乐观情景 (30%概率)</h4>
+                        <div class="text-3xl font-bold text-teal-600 mb-2">100倍</div>
+                        <p class="text-teal-600">3年后估值：$1B</p>
+                        <p class="text-teal-600">年化收益率：400%+</p>
+                    </div>
+                    <div class="bg-yellow-50 p-6 rounded-xl">
+                        <h4 class="text-xl font-bold text-yellow-700 mb-2">超预期情景 (10%概率)</h4>
+                        <div class="text-3xl font-bold text-yellow-600 mb-2">200倍+</div>
+                        <p class="text-yellow-600">3年后估值：$2B+</p>
+                        <p class="text-yellow-600">年化收益率：800%+</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section id="cta" class="py-20 md:py-28 text-center bg-white">
+            <div class="container mx-auto px-6 lg:px-8 fade-in-section">
+                 <h2 class="section-title">一个独一无二的投资机会</h2>
+                <p class="section-subtitle">投资鳍开得胜，您将同时拥有一个高安全边际的资产"安全垫"，和一个具备巨大爆发潜力的增长"超级彩票"。我们相信，这是市场上最聪明的风险投资之一。</p>
+                <!-- 项目链接 -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+                    <a href="https://tunakings-organization.gitbook.io/tuna-rwa-docs" target="_blank" class="bg-[#1e40af] hover:bg-[#1d4ed8] text-white font-medium py-3 px-4 rounded-lg transition-colors text-center shadow-lg">
+                        🐟 白皮书
+                    </a>
+                    <a href="https://tunarwa.io/zh" target="_blank" class="bg-[#0ea5e9] hover:bg-[#0284c7] text-white font-medium py-3 px-4 rounded-lg transition-colors text-center shadow-lg">
+                        🐟 官网
+                    </a>
+                    <a href="https://x.com/tunakingrwa" target="_blank" class="bg-[#0d9488] hover:bg-[#0f766e] text-white font-medium py-3 px-4 rounded-lg transition-colors text-center shadow-lg">
+                        🐟 推特
+                    </a>
+                    <a href="https://t.me/TUNA8888" target="_blank" class="bg-[#1e40af] hover:bg-[#1d4ed8] text-white font-medium py-3 px-4 rounded-lg transition-colors text-center shadow-lg">
+                        🐟 电报
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="finwin-gradient text-white py-8">
+        <div class="container mx-auto px-6 lg:px-8 text-center text-gray-200">
+            <h3 class="text-xl font-bold mb-2">🐟 鳍开得胜</h3>
+            <p class="mb-4">重新定义海洋的价值，构建可持续的蓝色经济</p>
+
+            <p>&copy; 2024 鳍开得胜. 保留所有权利。</p>
+            <p class="text-sm mt-2">免责声明：本文件仅供参考，不构成任何投资建议。投资有风险，决策需谨慎。</p>
+        </div>
+    </footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+
+    // Revenue Chart
+    const revenueCtx = document.getElementById('revenueChart')?.getContext('2d');
+    if (revenueCtx) {
+        new Chart(revenueCtx, {
+            type: 'bar',
+            data: {
+                labels: ['纯租赁', '捕捞批发', '鳍开得胜增值加工'],
+                datasets: [{
+                    label: '年总收入 (美元)',
+                    data: [21000, 140000, 188000],
+                    backgroundColor: [
+                        '#0ea5e9',
+                        '#f59e0b',
+                        '#0d9488'
+                    ],
+                    borderColor: [
+                        '#0ea5e9',
+                        '#f59e0b',
+                        '#0d9488'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            callback: value => '$' + value / 1000 + 'k'
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                         callbacks: {
+                            label: context => `年总收入: $${context.parsed.y.toLocaleString()}`
+                        }
+                    }
+                }
+            }
+        });
+    }
+
+    // Comparison Chart
+    const comparisonCtx = document.getElementById('comparisonChart')?.getContext('2d');
+    if (comparisonCtx) {
+        new Chart(comparisonCtx, {
+            type: 'bar',
+            data: {
+                labels: ['生产成本 (相对值)', '产品纯度'],
+                datasets: [
+                    { label: '鳍开得胜 缩醛磷脂', data: [12.5, 98], backgroundColor: '#0d9488', barPercentage: 0.6 },
+                    { label: '日本同类产品', data: [100, 75], backgroundColor: '#CCCCCC', barPercentage: 0.6 }
+                ]
+            },
+            options: {
+                responsive: true, maintainAspectRatio: false, indexAxis: 'y',
+                scales: { x: { beginAtZero: true, ticks: { callback: value => value + '%' }}},
+                plugins: {
+                    title: { display: false },
+                    tooltip: {
+                        callbacks: {
+                            label: context => `${context.dataset.label}: ${context.parsed.x}%`
+                        }
+                    }
+                }
+            }
+        });
+    }
+
+    // Market Size Chart
+    const marketCtx = document.getElementById('marketChart')?.getContext('2d');
+    if (marketCtx) {
+        new Chart(marketCtx, {
+            type: 'bar',
+            data: {
+                labels: ['海洋生物活性成分', '功能性磷脂市场', 'RWA代币化资产', '总可达市场(TAM)'],
+                datasets: [
+                    {
+                        label: '2025年规模 (亿美元)',
+                        data: [109, 38.6, 230, 377.6],
+                        backgroundColor: '#0ea5e9'
+                    },
+                    {
+                        label: '2027年预测 (亿美元)',
+                        data: [123, 44.8, 650, 817.8],
+                        backgroundColor: '#0d9488'
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            callback: value => '$' + value + 'B'
+                        }
+                    }
+                },
+                plugins: {
+                    tooltip: {
+                        callbacks: {
+                            label: context => `${context.dataset.label}: $${context.parsed.y}亿`
+                        }
+                    }
+                }
+            }
+        });
+    }
+
+    // Funding Chart
+    const fundingCtx = document.getElementById('fundingChart')?.getContext('2d');
+    if(fundingCtx) {
+        new Chart(fundingCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['技术研发 (40%)', '市场扩张 (30%)', '产业链整合 (20%)', '团队建设 (10%)'],
+                datasets: [{
+                    data: [40, 30, 20, 10],
+                    backgroundColor: ['#1e40af', '#0d9488', '#f59e0b', '#6b7280'],
+                    borderColor: '#F8F9FA',
+                    borderWidth: 4,
+                    hoverOffset: 8
+                }]
+            },
+            options: {
+                responsive: true, maintainAspectRatio: false,
+                plugins: { legend: { position: 'bottom' }, title: { display: false } }
+            }
+        });
+    }
+
+    // Fade-in animation on scroll
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('fade-in-section');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('section').forEach(section => {
+        observer.observe(section);
+    });
+});
+</script>
+
+</body>
+</html>
